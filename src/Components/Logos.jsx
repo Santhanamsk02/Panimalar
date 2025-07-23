@@ -30,13 +30,13 @@ const Logos = () => {
     },{scope:container})
     
   return (
-      <div className='container px-5 py-5' style={{height:"20vh"}} ref={container}>
-          <div className="row logos h-100 justify-content-between">
-              <div className="col-md-2 logo d-flex justify-content-center px-3 py-2"><img src={logo1}  className='img img-fluid'></img></div>
-              <div className="col-md-2 logo d-flex justify-content-center  px-3 py-2"><img src={logo2}  className='img img-fluid'></img></div>
-              <div className="col-md-2 logo d-flex justify-content-center  px-3 py-2"><img src={logo3}  className='img img-fluid'></img></div>
-              <div className="col-md-2 logo d-flex justify-content-center  px-3 py-2"><img src={logo4}  className='img img-fluid'></img></div>
-              <div className="col-md-2 logo d-flex justify-content-center  px-3 py-2"><img src={logo5}  className='img img-fluid'></img></div>
+      <div className='container px-5 py-5' style={{minHeight:"20vh"}} ref={container}>
+          <div className="row logos h-100 justify-content-between row-gap-4 mb-5">
+              <div className="col-6 col-md-2 logo d-flex justify-content-center px-3 py-2"><img src={logo1}  className='img img-fluid'></img></div>
+              <div className="col-6 col-md-2 logo d-flex justify-content-center  px-3 py-2"><img src={logo2}  className='img img-fluid'></img></div>
+              <div className= " col-6 col-md-2 logo d-flex justify-content-center  px-3 py-2"><img src={logo3}  className='img img-fluid'></img></div>
+              <div className="col-6 col-md-2 logo d-flex justify-content-center  px-3 py-2"><img src={logo4}  className='img img-fluid'></img></div>
+              <div className="col-6 col-md-2 logo d-flex justify-content-center  px-3 py-2"><img src={logo5}  className='img img-fluid'></img></div>
               
           </div>
     </div>

@@ -59,8 +59,8 @@ const Footer = () => {
         <div>
       <div  className=' container-fluid footer d-flex flex-column align-items-center py-5 ' style={{minHeight:"65vh"}}  ref={container}>
           <img src={logo} style={{ height: "125px" }} className='flogo'></img>
-          <div className="curfont display-5 ftext">Panimalar Engineering College</div>
-          <ul className="fnav d-flex nav column-gap-5 py-3 mt-5 fs-5 border border-black border-2 border-start-0 border-end-0 px-4">
+          <div className="curfont display-5 ftext text-center">Panimalar Engineering College</div>
+          <ul className="fnav d-flex nav column-gap-5 py-3 mt-5 fs-5 border border-black border-2 border-start-0 border-end-0 px-4 flex-wrap justify-content-start flex-column flex-md-row">
             <li className="nav-item font">Home</li>
             <li className="nav-item font">About Us</li>
             <li className="nav-item font">Courses</li>

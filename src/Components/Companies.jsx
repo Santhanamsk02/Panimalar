@@ -84,31 +84,38 @@ const Companies = () => {
             .to('.img21', { left: "85%", top: "35%" }, '<').from('.box',{autoAlpha:0,scale:0,stagger:0.2})
     },{scope:container})
   return (
-      <div className=' container-fluid pt-5 mb-5' style={{minHeight:"100vh"}} ref={container}>
-          <div className="row">
-              <div className="col-md-12 display-5 text-center text-primary fw-bold font ">Our Recruiters</div>
-          </div>
-          <div className="row company position-relative" style={{ height: "90vh" }}>
-              {companies.map((item, index) => (
-                  <img src={item.src} className={`img img-fluid rounded-circle  p-3 ${item.className}`} style={{height:"120px",width:"120px"}} key={index}></img>
-              )
-              )}
-              <div className="con d-flex column-gap-4 justify-content-center align-items-center">
-                  <div className="box p-3 text-light box-1 text-center rounded-3">
-                      <div className="fs-3 font fw-bold">300+</div>
-                      <div className="fs-5">Hiring Companies</div>
-                  </div>
-                  <div className="box p-3 text-light box-2 text-center rounded-3">
-                      <div className="fs-3 font fw-bold">1500+</div>
-                      <div className="fs-5">Sucessful Alumini</div>
-                  </div>
-                  <div className="box p-3 px-5 text-light box-3 text-center rounded-3">
-                      <div className="fs-3 font fw-bold">90%</div>
-                      <div className="fs-5">Placements</div>
-                  </div>
-              </div>
-          </div>
+      <div className='container-fluid pt-5 mb-5' style={{ minHeight: "100vh" }} ref={container}>
+  <div className="row">
+    <div className="col-12 display-5 text-center text-primary fw-bold font">Our Recruiters</div>
+  </div>
+
+  <div className="row company position-relative" style={{ height: "90vh" }}>
+    {companies.map((item, index) => (
+      <img
+        src={item.src}
+        alt={`company-${index + 1}`}
+        className={`img img-fluid rounded-circle p-2 ${item.className}`}
+        key={index}
+      />
+    ))}
+
+    <div className="con d-flex justify-content-center align-items-center column-gap-4 flex-wrap row-gap-0">
+      <div className="box p-3 text-light box-1 text-center rounded-3">
+        <div className="fs-3 font fw-bold">300+</div>
+        <div className="fs-5">Hiring Companies</div>
+      </div>
+      <div className="box p-3 text-light box-2 text-center rounded-3">
+        <div className="fs-3 font fw-bold">1500+</div>
+        <div className="fs-5">Successful Alumni</div>
+      </div>
+      <div className="box p-3 px-5 text-light box-3 text-center rounded-3">
+        <div className="fs-3 font fw-bold">90%</div>
+        <div className="fs-5">Placements</div>
+      </div>
     </div>
+  </div>
+</div>
+
   )
 }
 

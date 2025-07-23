@@ -156,19 +156,22 @@ const Courses = () => {
         }
   return (
       <div className=' container-fluid pt-5' style={{minHeight:"150vh"}} ref={container}>
-          <div className="row rounded-5 border position-relative border-2 mx-5">
+          <div className="row rounded-5 border position-relative border-2 mx-md-5 mx-0">
               <div className="col-md-3 font fs-5 text-center py-2 rounded-5" onMouseOver={showAll}>All</div>
               <div className="col-md-3 font fs-5  text-center py-2 rounded-5" onMouseOver={showUG}>Under Graduate</div>
               <div className="col-md-3 font fs-5 text-center py-2 rounded-5" onMouseOver={showPG} >Post Grduate</div>
               <div className="col-md-3 font fs-5  text-center py-2 rounded-5" onMouseOver={showSH}>Science And Humanities</div>
-              <div className="col-md-3 position-absolute cnav  py-2 rounded-5 h-100"></div>
+              <div className="col-md-3 position-absolute cnav  py-2 rounded-5 h-100 d-md-block d-none"></div>
           </div>
         <div className="row mt-4 justify-content-center bnav" style={{display:"none",scale:0}}>
-              <div className="col-md-3 d-flex border rounded-5 position-relative">
-                      <div className="col-md-4 font fs-5 text-center py-2 rounded-5" onMouseOver={showAllUG}>All</div>
-                    <div className="col-md-4 font fs-5 text-center py-2 rounded-5"onMouseOver={showBE}>B.E</div>
-                  <div className="col-md-4 font fs-5 text-center py-2 rounded-5"onMouseOver={showBTech}>B.Tech</div>
-                    <div className="col-md-4 position-absolute bcnav  py-2 rounded-5 h-100" style={{left:"0%"}}></div>
+              <div className="col-12 col-md-3 d-flex border rounded-5 position-relative">
+                  <div className="row w-100">
+                      <div className="col-4 font fs-5 text-center py-2 rounded-5" onMouseOver={showAllUG}>All</div>
+                    <div className="col-4 font fs-5 text-center py-2 rounded-5"onMouseOver={showBE}>B.E</div>
+                  <div className="col-4 font fs-5 text-center py-2 rounded-5"onMouseOver={showBTech}>B.Tech</div>
+                    <div className="col-4 position-absolute bcnav  py-2 rounded-5 h-100" style={{left:"0%"}}></div>
+                  </div>
+                      
               </div>   
           </div>
           <div className="row mt-5 row-gap-4 column-gap-4 justify-content-center mx-5">

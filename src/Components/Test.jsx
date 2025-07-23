@@ -96,9 +96,9 @@ const Test = () => {
     },{scope:container})
   return (
       <div className=' container-fluid ' style={{minHeight:"100vh"}} ref={container}>
-          <div className="row py-5 px-5">
-              <div className="col-12 font text-center text-black fs-1 fw-bold ttxt">Welcome to Panimalar Engineering College</div>
-              <div className="col-12 font text-center text-black fs-5 px-5 ttxt">A premier and reputed institution since 2000, located in Chennai, India, dedicated to excellence in engineering education. Offering a broad spectrum of UG, PG, and Research Programs in various engineering and technology disciplines.</div>
+          <div className="row py-5 px-md-5 px-1">
+              <div className="col-12 font  text-black fs-1 fw-bold ttxt text-md-center">Welcome to Panimalar Engineering College</div>
+              <div className="col-12 font text-black fs-5 ps-2 px-md-5 text-md-center ttxt">A premier and reputed institution since 2000, located in Chennai, India, dedicated to excellence in engineering education. Offering a broad spectrum of UG, PG, and Research Programs in various engineering and technology disciplines.</div>
           </div>
           <div className="container d-flex justify-content-center flex-wrap column-gap-5 row-gap-4">
               {abouts.map((val, index) => (
@@ -128,6 +128,17 @@ const Test = () => {
                      modifier: 1,
                    slideShadows: true,
           }}
+          breakpoints={{
+    0: {
+      slidesPerView: 1, 
+    },
+    768: {
+      slidesPerView: 2, 
+    },
+    992: {
+      slidesPerView: 3, 
+    },
+  }}
           loop={true}
                 pagination={true}
                 modules={[EffectCoverflow, Pagination,Autoplay]}

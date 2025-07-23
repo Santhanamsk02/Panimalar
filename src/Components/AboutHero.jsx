@@ -14,121 +14,124 @@ const AboutHero = () => {
     const container4 = useRef();
 
     useGSAP(() => {
-        const atext = SplitText.create('.atext');
-        const aptext = SplitText.create('.aptext');
-        const vhead = SplitText.create('.vhead');
-        const vtext = SplitText.create('.vtext');
-        const mhead = SplitText.create('.mhead');
-        const mtext = SplitText.create('.mtext');
-        const chead = SplitText.create('.chead');
-        const ctext = SplitText.create('.ctext');
-        var tl1 = gsap.timeline({ delay: 6 })
-        var tl2 = gsap.timeline({ scrollTrigger: { trigger: container.current, start: "25% 100%", end: '100% 100%', scrub: 2 } })
-        var tl3 = gsap.timeline({ scrollTrigger: { trigger: container2.current, start: '50% 100%', end: '90% 100%', scrub: 2 } })
-        var tl4 = gsap.timeline({ scrollTrigger: { trigger: container3.current, start: '50% 100%', end: '90% 100%', scrub: 2 } })
-        var tl5=gsap.timeline({scrollTrigger:{trigger:container4.current,start:'20% 100%',end:'100% 100%',scrub:2}})
+        const screenWidth = window.innerWidth;
+        if (screenWidth > 768) {
+            const atext = SplitText.create('.atext');
+            const aptext = SplitText.create('.aptext');
+            const vhead = SplitText.create('.vhead');
+            const vtext = SplitText.create('.vtext');
+            const mhead = SplitText.create('.mhead');
+            const mtext = SplitText.create('.mtext');
+            const chead = SplitText.create('.chead');
+            const ctext = SplitText.create('.ctext');
+            var tl1 = gsap.timeline({ delay: 6 })
+            var tl2 = gsap.timeline({ scrollTrigger: { trigger: container.current, start: "25% 100%", end: '100% 100%', scrub: 2 } })
+            var tl3 = gsap.timeline({ scrollTrigger: { trigger: container2.current, start: '50% 100%', end: '90% 100%', scrub: 2 } })
+            var tl4 = gsap.timeline({ scrollTrigger: { trigger: container3.current, start: '50% 100%', end: '90% 100%', scrub: 2 } })
+            var tl5 = gsap.timeline({ scrollTrigger: { trigger: container4.current, start: '20% 100%', end: '100% 100%', scrub: 2 } })
         
         
-        tl1.from(atext.chars, {
-            top:"70px",
-            autoAlpha: 0,
-            stagger:0.2
-        })
-        tl1.from(aptext.lines, {
-            top:"70px",
-            autoAlpha: 0,
-            stagger:0.2
-        })
-        tl1.from('.aimg1', {
-            scale:0
-        })
-        tl1.from('.aimg2', {
-            scale:0
-        })
-        tl2.to('.aimg1', {
-            top: "600px",
-            left: '-370px',
-            height: "145%",
-            width:"85%"
-        })
-        tl2.to('.aimg2', {
-            top: "750px",
-            left: '-700px',
-            height: "70%",
-            border:"7px solid white"
-        }, '<')
-        tl2.to('.aimg1', {
-            top: "1600px",
-            left: '370px',
-            height: "40%",
-            width: "40%",
-            border: "7px solid white",
-            zIndex:2
-        })
-        tl2.to('.aimg2', {
-            top: "1500px",
-            left: '-300px',
-            width:"600px",
-            height: "500px",
-            border:"0px solid white"
-        }, '<')
-        tl2.to('.aimg1', {
-            top: "2300px",
-            left: '-385px',
-            height: "400px",
-            width: "500px",
-            zIndex:2
-        })
-        tl2.to('.aimg2', {
-            top: "2310px",
-            left: '-130px',
-            height: "370px",
-            width:"470px",
-        }, '<')
-        tl3.from(vhead.chars, {
-            y: 50,
-            autoAlpha: 0,
-            stagger:0.25
-        })
-        tl3.from(vtext.lines, {
-            y: -50,
-            autoAlpha: 0,
-            stagger:0.25
-        })
-        tl4.from(mhead.chars, {
-            y: 50,
-            autoAlpha: 0,
-            stagger:0.25
-        })
-        tl4.from(mtext.lines, {
-            y: -50,
-            autoAlpha: 0,
-            stagger:0.25
-        })
-        tl5.from(chead.chars, {
-            y: 50,
-            autoAlpha: 0,
-            stagger:0.25
-        })
-        tl5.from(ctext.lines, {
-            y: -50,
-            autoAlpha: 0,
-            stagger:0.25
-        })
-        tl5.from('.cbox', {
-            scale: 0,
-            stagger:0.25
-        })
+            tl1.from(atext.chars, {
+                top: "70px",
+                autoAlpha: 0,
+                stagger: 0.2
+            })
+            tl1.from(aptext.lines, {
+                top: "70px",
+                autoAlpha: 0,
+                stagger: 0.2
+            })
+            tl1.from('.aimg1', {
+                scale: 0
+            })
+            tl1.from('.aimg2', {
+                scale: 0
+            })
+            tl2.to('.aimg1', {
+                top: "600px",
+                left: '-370px',
+                height: "145%",
+                width: "85%"
+            })
+            tl2.to('.aimg2', {
+                top: "750px",
+                left: '-700px',
+                height: "70%",
+                border: "7px solid white"
+            }, '<')
+            tl2.to('.aimg1', {
+                top: "1600px",
+                left: '370px',
+                height: "40%",
+                width: "40%",
+                border: "7px solid white",
+                zIndex: 2
+            })
+            tl2.to('.aimg2', {
+                top: "1500px",
+                left: '-300px',
+                width: "600px",
+                height: "500px",
+                border: "0px solid white"
+            }, '<')
+            tl2.to('.aimg1', {
+                top: "2300px",
+                left: '-385px',
+                height: "400px",
+                width: "500px",
+                zIndex: 2
+            })
+            tl2.to('.aimg2', {
+                top: "2310px",
+                left: '-130px',
+                height: "370px",
+                width: "470px",
+            }, '<')
+            tl3.from(vhead.chars, {
+                y: 50,
+                autoAlpha: 0,
+                stagger: 0.25
+            })
+            tl3.from(vtext.lines, {
+                y: -50,
+                autoAlpha: 0,
+                stagger: 0.25
+            })
+            tl4.from(mhead.chars, {
+                y: 50,
+                autoAlpha: 0,
+                stagger: 0.25
+            })
+            tl4.from(mtext.lines, {
+                y: -50,
+                autoAlpha: 0,
+                stagger: 0.25
+            })
+            tl5.from(chead.chars, {
+                y: 50,
+                autoAlpha: 0,
+                stagger: 0.25
+            })
+            tl5.from(ctext.lines, {
+                y: -50,
+                autoAlpha: 0,
+                stagger: 0.25
+            })
+            tl5.from('.cbox', {
+                scale: 0,
+                stagger: 0.25
+            })
+        }
     },[])
     return (
         <>
             <div className="conatiner-fluid" ref={container} style={{overflowX:"hidden",minHeight:"350vh"}}>
-                <div className=' container-fluid ' style={{ height: "87vh" }} >
+                <div className=' container-fluid ' style={{  minHeight: "100vh" }} >
           <div className="row d-flex justify-content-center align-items-center row-gap-0 h-100">
               <div className="row">
               <div className=" capsfont atext" style={{ fontSize: "9rem" }}>ABOUT</div>
               <div className="col-md-3">
-                  <div className="capsfont atext" style={{ fontSize: "8.5rem" }}>US</div>
+                  <div className="capsfont atext" style={{ fontSize: "9rem" }}>US</div>
                   <div className=" font aptext" style={{ fontSize: "1.15rem",textAlign:"justify" }}>Panimalar Engineering College, a Christian Minority Institution of Higher Education governed by JAISAKTHI Educational Trust</div>
                   <div className="font mt-4 aptext" style={{ fontSize: "1.15rem",textAlign:"justify" }}>Aims at imparting quality engineering and management education for the aspiring youth.</div>
               </div> 
@@ -142,7 +145,7 @@ const AboutHero = () => {
             </div>
           </div>
             </div>
-            <div className="container-fluid" style={{ height: "90vh" }} ref={container2}>
+            <div className="container-fluid" style={{ minHeight: "90vh" }} ref={container2}>
                 <div className="row h-100">
                     <div className="col-md-6">
 
